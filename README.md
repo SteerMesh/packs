@@ -31,6 +31,12 @@ Each pack must include:
 - `CHANGELOG.md` — Version history
 - Compatibility matrix (e.g. `COMPATIBILITY.md` or section in README)
 
+## Versioning
+Packs follow semver. Pin exact versions for deterministic builds in production, and update packs via a controlled release process.
+
+## Validation
+Use the `spec` repo schemas to validate packs locally before publishing or releasing.
+
 ## License
 
 See the repository license.
