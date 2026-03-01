@@ -1,0 +1,22 @@
+pack:
+  name: security-core
+  version: 1.0.0
+
+policies:
+  - id: no-secrets
+    description: Do not commit secrets, API keys, or credentials to version control
+    enforcement: strict
+  - id: no-hardcoded-keys
+    description: Avoid hardcoded keys; use environment variables or secret managers
+    enforcement: advisory
+  - id: dependency-audit
+    description: Keep dependencies updated and run security audits (e.g. npm audit, go mod)
+    enforcement: advisory
+
+targets:
+  kiro:
+    output: kiro-steering.yaml
+  cursor:
+    output: .cursor/steering.json
+  amazonq:
+    output: amazonq-steering.json

@@ -1,0 +1,19 @@
+pack:
+  name: enterprise-base
+  version: 1.0.0
+
+policies:
+  - id: compliance-audit
+    description: Changes affecting compliance-sensitive paths should be audited and approved
+    enforcement: advisory
+  - id: data-handling
+    description: Do not log or persist PII/sensitive data without proper controls
+    enforcement: advisory
+
+targets:
+  kiro:
+    output: kiro-steering.yaml
+  cursor:
+    output: .cursor/steering.json
+  amazonq:
+    output: amazonq-steering.json

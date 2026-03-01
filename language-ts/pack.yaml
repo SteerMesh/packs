@@ -1,0 +1,22 @@
+pack:
+  name: language-ts
+  version: 1.0.0
+
+policies:
+  - id: ts-format
+    description: Use consistent formatting (e.g. Prettier) and run before commit
+    enforcement: advisory
+  - id: ts-lint
+    description: Run ESLint (or equivalent) in CI
+    enforcement: advisory
+  - id: ts-types
+    description: Prefer TypeScript strict mode and avoid any where possible
+    enforcement: advisory
+
+targets:
+  kiro:
+    output: kiro-steering.yaml
+  cursor:
+    output: .cursor/steering.json
+  amazonq:
+    output: amazonq-steering.json

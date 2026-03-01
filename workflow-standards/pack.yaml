@@ -1,0 +1,22 @@
+pack:
+  name: workflow-standards
+  version: 1.0.0
+
+policies:
+  - id: pr-required
+    description: Prefer PR flow; avoid pushing directly to main/protected branches
+    enforcement: advisory
+  - id: review-before-merge
+    description: Require at least one review before merging
+    enforcement: advisory
+  - id: branch-naming
+    description: Use consistent branch naming (e.g. feature/, fix/, chore/)
+    enforcement: advisory
+
+targets:
+  kiro:
+    output: kiro-steering.yaml
+  cursor:
+    output: .cursor/steering.json
+  amazonq:
+    output: amazonq-steering.json

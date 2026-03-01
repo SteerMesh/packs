@@ -1,0 +1,22 @@
+pack:
+  name: language-go
+  version: 1.0.0
+
+policies:
+  - id: go-format
+    description: Run gofmt (or go run golang.org/x/tools/cmd/goimports) before commit
+    enforcement: advisory
+  - id: go-lint
+    description: Run static analysis (e.g. staticcheck, golangci-lint) in CI
+    enforcement: advisory
+  - id: go-test
+    description: Maintain tests for critical paths; run go test in CI
+    enforcement: advisory
+
+targets:
+  kiro:
+    output: kiro-steering.yaml
+  cursor:
+    output: .cursor/steering.json
+  amazonq:
+    output: amazonq-steering.json
